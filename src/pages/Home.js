@@ -9,9 +9,10 @@ export default function Home() {
     { title: 'the final empire', id: 3 },
     { title: 'the way of kings', id: 4 },
   ]);
+  console.log(typeof setBooks);
 
   return (
-    <div className="App">
+    <div>
       {books && <BookList books={books} />}
       <BookForm />
     </div>
