@@ -40,7 +40,6 @@ nav a {
   padding: 10px;
   background: #fff;
   margin: 10px 0;
-  cursor: pointer;
 }
 label,
 label span {
@@ -56,4 +55,14 @@ button {
   color: #fff;
   border: 0;
   padding: 6px 8px;
+}
+
+.delete-icon {
+  cursor: pointer;
+  height: 20px;
+  filter: invert(20%);
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
 }
