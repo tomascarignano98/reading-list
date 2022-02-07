@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useLogout } from '../hooks/useLogout';
 
 export default function Navbar() {
+  const { error, logout } = useLogout();
+
+  if (error) console.log(error);
+
   return (
     <nav>
       <h1>My Reading List</h1>
@@ -15,7 +20,7 @@ export default function Navbar() {
         <li>
           <Link to="/signup">Signup</Link>
         </li>
-        <li>Logout</li>
+        <li onClick={logout}>Logout</li>
       </ul>
     </nav>
   );
