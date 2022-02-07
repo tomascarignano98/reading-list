@@ -9,7 +9,7 @@ export function useLogin() {
     setError(null);
 
     signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => console.log(userCredential.user))
+      .then((userCredential) => userCredential.user)
       .catch((error) => setError(error.message));
   }
 
